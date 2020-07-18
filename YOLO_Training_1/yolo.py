@@ -7,6 +7,7 @@ import argparse
 import time
 import cv2
 import os
+import matplotlib.pyplot as plt
 
 # construct the argument parse and parse the arguments
 ap = argparse.ArgumentParser()
@@ -122,6 +123,6 @@ if len(idxs) > 0:
 			0.5, color, 2)
 
 # show the output image
-cv2.imshow("Image", image)
-cv2.waitKey(0)
-#print(image)
+plt.figure(figsize = (10,10))
+plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
+plt.show()
